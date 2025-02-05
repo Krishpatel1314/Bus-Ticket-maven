@@ -1,19 +1,19 @@
-# Train Ticket Reservation System 
+# Bus Ticket Reservation System 
 <!-- - Youtube video for local setup of similar project: https://www.youtube.com/watch?v=mLFPodZO8Iw -->
 - Youtube video for Step by Step Guide on Local Setup: https://www.youtube.com/watch?v=Wd2GlEJJJlw
-<!-- - Live Url: https://traintickets.herokuapp.com <br>  -->
+<!-- - Live Url: https://Bustickets.herokuapp.com <br>  -->
 <!-- - Login Credentials: admin/admin -->
 
 ### About:
-This project is about the Train-Ticket-Reservation-System which is used to view Train Schedule, search trains, Seat availability, Train timings. We can also enquire about fare of different trains. We can get information about train between two stations. We can book seats online. This provides a safe and secure seat reservation system. 
-### Online Train Information and Reservation
+This project is about the Bus-Ticket-Reservation-System which is used to view Bus Schedule, search Bus, Seat availability, Bus timings. We can also enquire about fare of different Bus. We can get information about Bus between two stations. We can book seats online. This provides a safe and secure seat reservation system. 
+### Online Bus Information and Reservation
 <span style="color:blue">**This Website is built for following purpose:-**</span>
-- View Trains Schedule
-- Search Trains
+- View Bus Schedule
+- Search Bus
 - Seat Availability
-- Train Timings
+- Bus Timings
 - Fare Enquiry
-- Trains Between Stations
+- Bus Between Stations
 - Booking seats online.
 - Login and Logout Security
 - Password Changes
@@ -22,20 +22,20 @@ This project is about the Train-Ticket-Reservation-System which is used to view 
 
 <span style="color:blue">**The Admin have the following access to this website:-**</span>
 - Login
-- Add Trains
-- Update Trains
-- Remove  or cancle Trains
-- View Trains
+- Add Bus
+- Update Bus
+- Remove  or cancle Bus
+- View Bus
 - Profile Edit
 - Logout
 
 <span style="color:blue">**The Users have the following Access:-**</span>
 - Register
 - Login
-- View Trains
+- View Bus
 - Check Seat Availability
-- Search Trains
-- Train Avaiablity and Fare Between Stations
+- Search Bus
+- Bus Avaiablity and Fare Between Stations
 - Books Tickets
 - View Booking History
 - View Profile
@@ -108,7 +108,7 @@ CREATE TABLE "RESERVATION"."ADMIN"
 );
 
 
-CREATE TABLE "RESERVATION"."TRAIN" 
+CREATE TABLE "RESERVATION"."Bus" 
 (	
 "TR_NO" NUMBER(10) PRIMARY KEY, 
 "TR_NAME" VARCHAR2(70) NOT NULL, 
@@ -135,12 +135,12 @@ COMMIT;
 INSERT INTO RESERVATION.ADMIN VALUES('admin@demo.com','admin','System','Admin','Demo Address 123 colony','9874561230');
 INSERT INTO RESERVATION.CUSTOMER VALUES('shashi@demo.com','shashi','Shashi','Raj','Kolkata, West Bengal',954745222);
 
-INSERT INTO RESERVATION.TRAIN VALUES(10001,'JODHPUR EXP','HOWRAH','JODHPUR', 152, 490.50);
-INSERT INTO RESERVATION.TRAIN VALUES(10002,'YAMUNA EXP','GAYA','DELHI', 52, 550.50);
-INSERT INTO RESERVATION.TRAIN VALUES(10003,'NILANCHAL EXP','GAYA','HOWRAH', 92, 451);
-INSERT INTO RESERVATION.TRAIN VALUES(10004,'JAN SATABDI EXP','RANCHI','PATNA', 182, 550);
-INSERT INTO RESERVATION.TRAIN VALUES(10005,'GANGE EXP','MUMBAI','KERALA', 12, 945);
-INSERT INTO RESERVATION.TRAIN VALUES(10006,'GARIB RATH EXP','PATNA','DELHI', 1, 1450.75);
+INSERT INTO RESERVATION.Bus VALUES(10001,'JODHPUR EXP','HOWRAH','JODHPUR', 152, 490.50);
+INSERT INTO RESERVATION.Bus VALUES(10002,'YAMUNA EXP','GAYA','DELHI', 52, 550.50);
+INSERT INTO RESERVATION.Bus VALUES(10003,'NILANCHAL EXP','GAYA','HOWRAH', 92, 451);
+INSERT INTO RESERVATION.Bus VALUES(10004,'JAN SATABDI EXP','RANCHI','PATNA', 182, 550);
+INSERT INTO RESERVATION.Bus VALUES(10005,'GANGE EXP','MUMBAI','KERALA', 12, 945);
+INSERT INTO RESERVATION.Bus VALUES(10006,'GARIB RATH EXP','PATNA','DELHI', 1, 1450.75);
 
 INSERT INTO RESERVATION.HISTORY VALUES('BBC374-NSDF-4673','shashi@demo.com',10001,TO_DATE('02-FEB-2024'), 'HOWRAH', 'JODHPUR', 2, 981);
 INSERT INTO RESERVATION.HISTORY VALUES('BBC375-NSDF-4675','shashi@demo.com',10004,TO_DATE('12-JAN-2024'), 'RANCHI', 'PATNA', 1, 550);
@@ -152,7 +152,7 @@ STEP 5: Now Execute the below query one by one to check if the tables are create
 ```SQL
 SELECT * FROM ADMIN;
 SELECT * FROM CUSTOMER;
-SELECT * FROM TRAIN;
+SELECT * FROM Bus;
 SELECT * FROM HISTORY;
 
 ```
@@ -161,7 +161,7 @@ Note: If any of the above commands fails, please try to fix it first and then pr
 ### ====== Importing and Running the Project Through Eclipse EE ===========
 Step 0: Open Eclipse Enterprise Edition. [Install if not available](https://www.youtube.com/watch?v=8aDsEV7txXE)
 
-Step 1: Click On File > Import > Git > Projects From Git > Clone Uri  > Paste The Repository Url: ```https://github.com/shashirajraja/Train-Ticket-Reservation-System.git``` > Next > Select Master Branch > Next > Finish
+Step 1: Click On File > Import > Git > Projects From Git > Clone Uri  > Paste The Repository Url: ```https://github.com/shashirajraja/Bus-Ticket-Reservation-System.git``` > Next > Select Master Branch > Next > Finish
 
 Step 2.A: Right Click on Project > Run as > Maven Build > In the goals field enter "clean install" > apply > run
 
@@ -173,7 +173,7 @@ Step 4: In The Server Tab > Double Click On Tomcat Server > Ports  > Change The 
 
 Step 5: Right Click On Project > Run As > Run On Server > Select Tomcat V8.0 > Next > Add All> Done
 
-Step 6: Check Running The Site At  <a Href="Http://localhost:8083/trainbook/">http://localhost:8083/trainbook/</a>
+Step 6: Check Running The Site At  <a Href="Http://localhost:8083/Busbook/">http://localhost:8083/Busbook/</a>
 
 Step 7: Default Username And Password For Admin Is "admin@demo.com" And "admin"
 
@@ -184,7 +184,7 @@ Step 8: Default Username And Password For User Is "shashi@demo.com" And "shashi"
 ### The Screenshots of some of the  webPages of this project are Here:
 
 1. Login Page
-<img width="100%" alt="Login to Book Trains" src="https://user-images.githubusercontent.com/34605595/232219369-85b55a1d-6640-4821-941a-dcca08036fbe.png">
+<img width="100%" alt="Login to Book Bus" src="https://user-images.githubusercontent.com/34605595/232219369-85b55a1d-6640-4821-941a-dcca08036fbe.png">
 
 2. Register New User
 <img width="100%" alt="Register New User" src="https://user-images.githubusercontent.com/34605595/232219485-2b00949a-be20-44f7-b6c1-107213221f94.png">
@@ -192,17 +192,17 @@ Step 8: Default Username And Password For User Is "shashi@demo.com" And "shashi"
 3. User Profile
 <img width="100%" alt="View User Profile" src="https://user-images.githubusercontent.com/34605595/232219729-2720e50f-e14b-4253-831a-85c59e3054b3.png">
 
-4. Search Trains Between Stations
-<img width="100%" alt="Search Trains Between Stations" src="https://user-images.githubusercontent.com/34605595/232220357-54b634d6-afae-427c-b3af-57b372b70906.png">
+4. Search Bus Between Stations
+<img width="100%" alt="Search Bus Between Stations" src="https://user-images.githubusercontent.com/34605595/232220357-54b634d6-afae-427c-b3af-57b372b70906.png">
 
-5. View Trains
-<img width="100%" alt="View Available Trains" src="https://user-images.githubusercontent.com/34605595/232219905-983eeefe-977b-40ad-a695-4ec577272dcc.png">
+5. View Bus
+<img width="100%" alt="View Available Bus" src="https://user-images.githubusercontent.com/34605595/232219905-983eeefe-977b-40ad-a695-4ec577272dcc.png">
 
-7. Book Trains
-<img width="100%" alt="Book Trains Project" src="https://user-images.githubusercontent.com/34605595/232220107-415b251f-90b9-4e70-aff8-e94d370927f6.png">
+7. Book Bus
+<img width="100%" alt="Book Bus Project" src="https://user-images.githubusercontent.com/34605595/232220107-415b251f-90b9-4e70-aff8-e94d370927f6.png">
 
 8. Payment Gateway
-<img width="100%" alt="Pay to Book Trains" src="https://user-images.githubusercontent.com/34605595/232220744-351c2c6d-e1f6-49ad-a11b-7680aa63dbe3.png">
+<img width="100%" alt="Pay to Book Bus" src="https://user-images.githubusercontent.com/34605595/232220744-351c2c6d-e1f6-49ad-a11b-7680aa63dbe3.png">
 
 9. Booked Ticket Information
 <img width="100%" alt="Show Booked Ticket Details" src="https://user-images.githubusercontent.com/34605595/232220935-654bda38-cbde-4203-84b8-3078a32ac6ec.png">
@@ -211,13 +211,13 @@ Step 8: Default Username And Password For User Is "shashi@demo.com" And "shashi"
 <img width="100%" alt="All Ticket Booking History" src="https://user-images.githubusercontent.com/34605595/232220491-3e7996cb-a54c-4375-a35a-6ab1d211a001.png">
 
 11. Fare Enquiry
-<img alt="Fare Enquiry between stations" src="https://github.com/shashirajraja/Train-Ticket-Reservation-System/blob/master/Screenshots/fareenquiry.png" width="100%">
+<img alt="Fare Enquiry between stations" src="https://github.com/shashirajraja/Bus-Ticket-Reservation-System/blob/master/Screenshots/fareenquiry.png" width="100%">
 
 12. Change Password
-<img alt="Change user Password" src="https://github.com/shashirajraja/Train-Ticket-Reservation-System/blob/master/Screenshots/passwordchange.png" width="100%">
+<img alt="Change user Password" src="https://github.com/shashirajraja/Bus-Ticket-Reservation-System/blob/master/Screenshots/passwordchange.png" width="100%">
 
-13. Add Trains By Admin
-<img alt="Admin Home" src="https://github.com/shashirajraja/Train-Ticket-Reservation-System/blob/master/Screenshots/addtrains.png" width="100%">
+13. Add Bus By Admin
+<img alt="Admin Home" src="https://github.com/shashirajraja/Bus-Ticket-Reservation-System/blob/master/Screenshots/addBus.png" width="100%">
 
 
 #### "Suggestions and project Improvement are Invited"
